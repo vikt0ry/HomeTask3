@@ -6,6 +6,8 @@ import myprojects.automation.assignment3.support.EventHandler;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
+import java.util.Date;
+
 public class CreateCategoryTest extends BaseScript {
 
     public static void main(String[] args) {
@@ -17,7 +19,7 @@ public class CreateCategoryTest extends BaseScript {
         // login
         generalActions.login("webinar.test@gmail.com", "Xcg7299bnSmMuRLp9ITw");
         // create category
-        String catName = "Goods";
+        String catName = "My_category_"+new Date().getTime();
         generalActions.createCategory(catName);
         // check that new category appears in Categories table
         generalActions.checkNewCategory(catName);
