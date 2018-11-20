@@ -26,6 +26,7 @@ public class GeneralActions {
      * @param password
      */
     public void login(String login, String password) {
+        driver.manage().window().maximize();
         driver.get("http://prestashop-automation.qatestlab.com.ua/admin147ajyvk0/");
         driver.findElement(By.id("email")).sendKeys(login);
         driver.findElement(By.id("passwd")).sendKeys(password);
@@ -84,7 +85,7 @@ public class GeneralActions {
     }
 
     public void finish() {
-//        driver.quit();
+       driver.quit();
 
 
     }
